@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">High and Low</string>
+    <string name="bt_start">START</string>
+    <string name="bt_high">High</string>
+    <string name="bt_low">Low</string>
+</resources>

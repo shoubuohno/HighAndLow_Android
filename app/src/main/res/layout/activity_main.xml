@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/numDis"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/openNum"
+        android:textSize="50dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/hideNum"
+        android:textSize="50dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_start"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/btRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RETRY"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/btnDis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btHigh"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/bt_high"
+            android:textSize="45sp" />
+
+        <Button
+            android:id="@+id/btLow"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="@string/bt_low"
+            android:textSize="45sp" />
+
+    </LinearLayout>
+</LinearLayout>
+
+
+
