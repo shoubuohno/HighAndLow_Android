@@ -26,14 +26,11 @@ public class MainActivity extends AppCompatActivity {
         //ボタンが押されたときのインスタンス生成
         BtnListener listener = new BtnListener();
 
-
         //ボタンにリスナをセット
         startBtn.setOnClickListener(listener);
         highBtn.setOnClickListener(listener);
         lowBtn.setOnClickListener(listener);
         retryBtn.setOnClickListener(listener);
-
-
 
         //数字表示部分の取得
         LinearLayout numDis = findViewById(R.id.numDis);
@@ -44,15 +41,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout btnDis = findViewById(R.id.btnDis);
         //非表示化
         btnDis.setVisibility(View.INVISIBLE);
-
         retryBtn.setVisibility(View.INVISIBLE);
-
-
-
-
-
-
-
 
     }
 
@@ -63,14 +52,10 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout numDis = findViewById(R.id.numDis);
             //ボタン表示部分の取得
             LinearLayout btnDis = findViewById(R.id.btnDis);
-            //表示する数字のTextView取得
+            //初めに表示する数字のTextView取得
             TextView openNum = findViewById(R.id.openNum);
-
-
-
             //隠している数字を表示するテキストの取得
             TextView hideNum = findViewById(R.id.hideNum);
-            int num2;
 
             //Retryボタンの取得
             Button retryBtn = findViewById(R.id.btRetry);
@@ -82,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btStart:
                     //startボタンの非表示
                     view.setVisibility(View.INVISIBLE);
-                    //openNumの表示
+                    //最初に表示する数字の乱数生成、変数格納
                     int num1 =makeOpenNum();
                     openNum.setText(String.valueOf(num1));
                     //数字表示部分の表示
@@ -93,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btHigh:
                     //openNumTextViewの値を取得
                     String num = openNum.getText().toString();
+                    //num1に数値型に変換して格納
                     num1 = Integer.valueOf(num);
                     //hideNumTextViewの表示
                     hideNum.setVisibility(View.VISIBLE);
                     //hideNumの表示
-
-                    num2 = makeHideNum();
+                    int num2 = makeHideNum();
                     hideNum.setText(String.valueOf(num2));
                     //結果判定
                     if(num1 < num2) {
@@ -186,6 +171,3 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
-//    Button button = findViewById(R.id.button);
-//button.setVisibility(View.VISIBLE); // 表示する場合
-//        button.setVisibility(View.INVISIBLE); // 非表示にする場合
